@@ -1,0 +1,250 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: row wrap;
+  background-color: transparent;
+  transition: none;
+    color: var(--text-color);
+  padding: 8px 12px;
+  z-index: 50 !important;
+}
+
+.logo {
+  margin: 10px;
+  width: 30px;
+}
+
+.menu {
+  display: flex;
+  top: -40%;
+  max-height: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+  transition: max-height 0.6s ease-out;
+  z-index: 10;
+} 
+
+.menu.active {
+  padding-top: 500px;
+  max-height: 60vh;
+  opacity: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: -200px;
+  margin-right: 20px;
+  display: flex;
+}
+
+
+
+li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease;
+  font-weight: 400;
+  padding: 2px; 
+  z-index: 10;
+}
+
+a .active {
+  color: red !important;
+}
+
+li a:hover {
+  color: #1fffe1;
+  border-bottom: 2.2px solid #1fffe1;
+}
+
+.menu ul {
+  display: flex;
+  margin-right: 20px;
+  flex-direction: column;
+  list-style: none;
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+  z-index: 10;
+}
+
+.menu.active ul {
+  opacity: 1;
+  padding: 0;
+  z-index: 100;
+}
+
+.menu li {
+  padding: 10px;
+  z-index: 10;
+}
+
+
+.menu-icon {
+  position: relative;
+  top: 12px;
+  right: 50px;
+  display: flex;
+/* padding: 10px; */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu-icon .menu-line {
+  height: 3.2px;
+  width: 35px;
+  background-color: white !important;
+  margin: 5px 0;
+  transition: transform 0.3s;
+  z-index: 10;
+}
+
+.menu-icon.open .menu-line:nth-child(1) {
+  transform: rotate(-45deg) translate(-11px, 6px);
+}
+
+.menu-icon.open .menu-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .menu-line:nth-child(3) {
+  transform: rotate(45deg) translate(-11px, -6px);
+}
+
+/* Default animation (runs on larger screens) */
+.animation-running {
+  animation-name: yourAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Paused animation (applies to smaller screens) */
+.animation-paused {
+  animation-play-state: paused;
+}
+
+/* Define your animation */
+@keyframes yourAnimation {
+  0% {
+    /* Initial state */
+  }
+  100% {
+    /* Final state */
+  }
+}
+
+/* Apply the animation to the element */
+.animation {
+  animation-name: yourAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media screen and (min-width: 769px) {
+  nav {
+    width: 100%;
+    height: 50px;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+  }
+  nav.scrolled {
+    background-color: #003b57d8;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.705);
+  }
+  .menu {
+    align-items: flex-start;
+    margin-top: -11px;
+    max-height: none;
+    padding: 0px;
+  }
+
+  .menu.active {
+    padding-top: 0px;
+    max-height: 40vh;
+    opacity: 1;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .menu ul {
+    display: flex;
+  flex-direction: row;
+  margin-top: 1.3%;
+  opacity: 1;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1%;
+    margin-right: 0px;
+    display: flex;
+  }
+
+  .menu li {
+    padding-top: 10px;
+  }
+
+  .logo {
+    margin-top: -3px;
+    width: 70px;
+  }
+}
+
+
+@media screen and (max-width: 769px) {
+  nav {
+    width: 100%;
+    background-color: #003b57d8;
+  }
+
+.menu-line {
+  background: red !important;
+}
+
+ul {
+  margin-top: -270px;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+li a {
+  font-size: 2rem;
+}
+
+.logo {
+  margin-top: 5px;
+  margin-left: -8px;
+  width: 65px;
+}
+  /* Apply the 'animation-paused' class to pause the animation on smaller screens */
+  .animation-running {
+    animation-play-state: paused; /* Ensure it's paused by default on small screens */
+  }
+  .animation-paused {
+    animation-play-state: paused;
+  }
+}
+

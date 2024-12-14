@@ -1,0 +1,52 @@
+.card {
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    width: 38vw;
+    height: auto;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    border-radius: 10px;
+    margin-left: 20px;
+    opacity: 0; /* Initially hide the card */
+  transition: opacity 1s ease;
+    z-index: 100000000;
+  }
+
+  .card.visible {
+    opacity: 1; /* Show the card when it's visible */
+  }
+  
+  .card img {
+    margin-top: -20%;
+    width: 100%;
+    border-radius: 20px;
+    pointer-events: none;
+  }
+
+  .card img:hover {
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+  .card img:active {
+    pointer-events: auto; /* Re-enable pointer events while clicking */
+}
+  
+  .card h2 {
+    margin: 0;
+    margin-top: 1rem;
+  }
+  
+  .card p {
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card .btnn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

@@ -1,0 +1,13 @@
+.card {
+    background-color: #ffffff; /* Card background color */
+    padding: 20px;
+    border: 1px solid #ddd; /* Card border */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Spacing between cards */
+    box-shadow: 5px 5px 20px black;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }

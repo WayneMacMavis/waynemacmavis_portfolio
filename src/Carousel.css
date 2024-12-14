@@ -1,0 +1,28 @@
+.portfolio-page {
+  background: linear-gradient(to bottom, #05799c, #039bc9);
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10vw;
+    top: -2px;
+margin-bottom: -10vh;
+    /* -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% calc(100% - 5vw), 100% 100%, 0 100%); */
+    z-index: 10;
+  }
+
+  .container {
+    position: relative;
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% calc(100% - 5vw), 100% 100%, 0 100%); */
+    z-index: 10;
+  }

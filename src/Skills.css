@@ -1,0 +1,64 @@
+.skills-page {
+  background: linear-gradient(to bottom, #055f7a, #05799c);
+    position: relative;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10vw;
+    top: -2px;
+    /* -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% calc(100% - 5vw), 100% 100%, 0 100%); */
+    z-index: 10;
+  }
+
+.skills-title {
+  font-size: 40px;
+  color: white;
+}
+
+  .skills-list {
+    margin-top: 20px;
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+  
+  .icon-container {
+    margin-right: 15px;
+    font-size: 65px;
+    display: flex; /* Align the icon vertically with flexbox */
+    align-items: center;
+  }
+
+  .icon-container svg {
+    color: #007bff; /* Replace with your desired brand color */
+  }
+  
+  .skill-details {
+    flex-grow: 1;
+  }
+  
+  .skill-name {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+  
+  .progress-bar-container {
+    height: 29px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to right, #b1efffbb, #0066ff88);
+  }
