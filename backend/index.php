@@ -7,6 +7,6 @@ if (php_sapi_name() == 'cli-server') {
     // Use the dynamically assigned port
     $host = '0.0.0.0';
     $port = getenv('PORT') ?: 10000;
-    echo "Running server on http://$host:$port\n";
+    echo "Running server on https://$host:$port\n";
     // For Heroku, make sure your app listens on the assigned port.
 }
