@@ -592,3 +592,11 @@ Decoded input: stdClass Object
 SMTP configured
 Mail content set
 Mail sent successfully
+Script started
+Headers set
+Script started
+Headers set
+Script started
+Headers set
+Script started
+Headers set
