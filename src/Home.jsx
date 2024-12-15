@@ -17,6 +17,9 @@ const HomeVid = ({ children }) => {
 
   return (
     <div id="home" className="home-page">
+      <video className="gin-bg" preload='auto' width="auto" height="auto" autoPlay loop muted poster={Placeholder}>
+        <source src={Video} type="video/mp4" />
+      </video>
       <div className="text">
         <VisibilitySensor offset={{ top: 0 }} onChange={handleVisibilityChange}>
           <h1
@@ -48,9 +51,6 @@ const HomeVid = ({ children }) => {
           </h2>
         </VisibilitySensor>
       </div>
-      <video className="gin-bg" width="auto" height="auto" autoPlay loop muted poster={Placeholder}>
-        <source src={Video} type="video/mp4" />
-      </video>
     </div>
   );
 };
