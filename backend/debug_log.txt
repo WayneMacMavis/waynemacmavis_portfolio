@@ -70,3 +70,21 @@ Decoded input: stdClass Object
 SMTP configured
 Mail content set
 Mail sent successfully
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: stdClass Object
+(
+    [name] => Wayne Mac Mavis
+    [email] => w.macmavis83@gmail.com
+    [message] => gfgfgfgfgfg
+)
+
+SMTP configured
+Mail content set
+Mail sent successfully
