@@ -9,5 +9,5 @@ services:
     # volumes:
     #   - .:/var/www/html
     environment:
-      - ENV=local
+      - ENV=production
     restart: "always"  # Correct string format for restart policy
