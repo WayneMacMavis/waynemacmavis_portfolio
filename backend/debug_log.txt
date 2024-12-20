@@ -8,9 +8,9 @@ Headers set
 PHPMailer included
 Decoded input: stdClass Object
 (
-    [name] => wayne
+    [name] => Wayne Mac Mavis
     [email] => w.macmavis83@gmail.com
-    [message] => fdfdfdfd
+    [message] => bfbfgf
 )
 
 SMTP configured
@@ -24,11 +24,56 @@ Invalid input
 Script started
 Headers set
 PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
 Decoded input: stdClass Object
 (
-    [name] => Wayne
-    [email] => w.macmavis83@gmail.com
-    [message] => trtrtrtrt
+    [name] => John Doe
+    [email] => john@example.com
+    [message] => Hello!
 )
 
 SMTP configured
@@ -42,11 +87,16 @@ Invalid input
 Script started
 Headers set
 PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
 Decoded input: stdClass Object
 (
-    [name] => Wayne
+    [name] => Wayne Mac Mavis
     [email] => w.macmavis83@gmail.com
-    [message] => vcvcvcvc
+    [message] => xccxcxc
 )
 
 SMTP configured
@@ -64,7 +114,7 @@ Decoded input: stdClass Object
 (
     [name] => Wayne Mac Mavis
     [email] => w.macmavis83@gmail.com
-    [message] => bvbvbvbvb
+    [message] => vbvbvbv
 )
 
 SMTP configured
@@ -82,7 +132,79 @@ Decoded input: stdClass Object
 (
     [name] => Wayne Mac Mavis
     [email] => w.macmavis83@gmail.com
-    [message] => gfgfgfgfgfg
+    [message] => cxcxvcxc
+)
+
+SMTP configured
+Mail content set
+Mail sent successfully
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: stdClass Object
+(
+    [name] => Wayne Mac Mavis
+    [email] => w.macmavis83@gmail.com
+    [message] => ssdsdsd
+)
+
+SMTP configured
+Mail content set
+Mail sent successfully
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: stdClass Object
+(
+    [name] => Wayne Mac Mavis
+    [email] => w.macmavis83@gmail.com
+    [message] => xcxcxcxcx
+)
+
+SMTP configured
+Mail content set
+Mail sent successfully
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: stdClass Object
+(
+    [name] => Wayne Mac Mavis
+    [email] => w.macmavis83@gmail.com
+    [message] => fgfgfgfg
+)
+
+SMTP configured
+Mail content set
+Mail sent successfully
+Script started
+Headers set
+PHPMailer included
+Decoded input: 
+Invalid input
+Script started
+Headers set
+PHPMailer included
+Decoded input: stdClass Object
+(
+    [name] => Wayne Mac Mavis
+    [email] => w.macmavis83@gmail.com
+    [message] => dddsdsdsd
 )
 
 SMTP configured

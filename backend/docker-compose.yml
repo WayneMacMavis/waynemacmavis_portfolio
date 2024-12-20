@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  php-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # Map localhost:8080 to container's port 80
+    # volumes:
+    #   - .:/var/www/html
+    environment:
+      - ENV=local
+    restart: "always"  # Correct string format for restart policy
