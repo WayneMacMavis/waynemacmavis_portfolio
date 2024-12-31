@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiMail, FiTwitter, FiLinkedin, FiGithub, FiFacebook } from 'react-icons/fi';
+import emailjs from "emailjs-com";
 import './Footer.css';
 
 const Footer = () => {
@@ -8,70 +9,70 @@ const Footer = () => {
         email: "",
         message: "",
     });
-    const [status, setStatus] = useState("");
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [buttonText, setButtonText] = useState("Send");
-    const [buttonColor, setButtonColor] = useState("#333");
 
-    const handleChange = (e) => {
+    const [buttonState, setButtonState] = useState("send"); // Button state tracking (send, sending, sent)
+
+    // Handle input change
+    const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
     };
 
-    const handleSubmit = async (e) => {
+    // Send email using Email.js
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        setIsSubmitting(true);
-        setButtonColor("#00b300"); // Change color to green while submitting
-        setButtonText("Sending...");
+        // Change button state to "sending"
+        setButtonState("sending");
 
-        try {
-            const response = await fetch("http://waynemacmavis-portfolio.onrender.com/backend/contact.php", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
+        // Email.js service setup
+        emailjs
+            .sendForm("service_h0u8zqp", "template_lcl6gf8", e.target, "2biPObTZPzec_inXl")
+            .then(
+                (result) => {
+                    setButtonState("sent");  // Change button state to "sent"
+
+                    // Reset button state back to "send" after 3 seconds
+                    setTimeout(() => {
+                        setButtonState("send");
+                    }, 3000);
                 },
-                body: JSON.stringify(formData),
-            });
+                (error) => {
+                    setButtonState("send");  // Reset button state to "send" on error
+                }
+            );
 
-            const result = await response.json();
+        // Reset form fields
+        setFormData({
+            name: "",
+            email: "",
+            message: "",
+        });
+    };
 
-            if (result.success) {
-                setButtonText("Sent!");
-                setButtonColor("#4CAF50"); // Change button color to green on success
-                
-                // Reset the form
-                setFormData({
-                    name: "",
-                    email: "",
-                    message: "",
-                });
+    // Define dynamic button styles based on the state
+    const getButtonStyles = () => {
+        switch (buttonState) {
+            case "sending":
+                return { backgroundColor: "#f0ad4e", color: "#fff" }; // Orange for sending
+            case "sent":
+                return { backgroundColor: "#5cb85c", color: "#fff" }; // Green for sent
+            default:
+        }
+    };
 
-                // Reset after 3 seconds
-                setTimeout(() => {
-                    setButtonText("Send");
-                    setButtonColor("#333"); // Revert button color back to original
-                }, 3000);
-            } else {
-                setButtonText("Failed");
-                setButtonColor("#FF6347"); // Change color to red on failure
-                
-                setTimeout(() => {
-                    setButtonText("Send");
-                    setButtonColor("#333"); // Revert button color back to original
-                }, 3000);
-            }
-        } catch (error) {
-            setButtonText("Error");
-            setButtonColor("#FF6347"); // Change color to red on error
-            setStatus("Error connecting to server.");
-            
-            setTimeout(() => {
-                setButtonText("Send");
-                setButtonColor("#333"); // Revert button color back to original
-            }, 3000);
-        } finally {
-            setIsSubmitting(false);
+    // Define button text based on the state
+    const getButtonText = () => {
+        switch (buttonState) {
+            case "sending":
+                return "Sending...";
+            case "sent":
+                return "Sent!";
+            default:
+                return "Send";
         }
     };
 
@@ -80,6 +81,7 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="contact-info">
                     <h2>Contact Me</h2>
+                    <p>Phone: +27728627957</p>
                     <p>Email: w.macmavis83@gmail.com</p>
                 </div>
                 <div className="social-links">
@@ -98,35 +100,33 @@ const Footer = () => {
                         <input
                             type="text"
                             name="name"
-                            placeholder="Your Name"
                             value={formData.name}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
+                            placeholder="Enter your name"
                             required
                         />
                         <input
                             type="email"
                             name="email"
-                            placeholder="Your Email"
                             value={formData.email}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
+                            placeholder="Enter your email address"
                             required
                         />
                         <textarea
                             name="message"
-                            placeholder="Your Message"
                             value={formData.message}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
+                            placeholder="Type your message here"
                             required
                         />
-                        <button 
-                            type="submit" 
-                            disabled={isSubmitting} 
-                            style={{ backgroundColor: buttonColor }}
+                        <button
+                            type="submit"
+                            style={getButtonStyles()} // Apply dynamic styles
                         >
-                            {buttonText}
+                            {getButtonText()} {/* Dynamic button text */}
                         </button>
                     </form>
-                    {status && <p>{status}</p>}
                 </div>
             </div>
         </footer>
