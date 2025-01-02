@@ -1,5 +1,5 @@
 .skills-page {
-  background: linear-gradient(to bottom, #055f7a, #05799c);
+  background: rgb(0, 0, 128);
     position: relative;
     height: auto;
     flex-direction: column;
@@ -62,3 +62,21 @@
     border-radius: 5px;
     background: linear-gradient(to right, #b1efffbb, #0066ff88);
   }
+
+  .progress-bar-container {
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-value {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}

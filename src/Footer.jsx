@@ -77,7 +77,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="footer">
+        <footer id='contact' className="footer">
             <div className="footer-container">
                 <div className="contact-info">
                     <h2>Contact Me</h2>

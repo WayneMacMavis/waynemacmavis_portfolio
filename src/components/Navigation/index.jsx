@@ -16,10 +16,37 @@ const Navigation = () => {
     contact: false,
   });
 
-  useEffect(() => {
+ useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 150);
+
+      // Get the current section in view
+      let currentSection = '';
+      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+
+      // Set a threshold value for the top position of each section
+      const threshold = window.innerHeight / 2;
+
+      // Special condition for the "home" section at the top
+      if (scrollY === 0) {
+        currentSection = 'home';
+      } else {
+        for (let section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= threshold && rect.bottom > 0) {
+              currentSection = section;
+            }
+          }
+        }
+      }
+
+      // Update the URL with the ID of the section in view
+      if (currentSection) {
+        window.history.pushState(null, '', `#${currentSection}`);
+      }
     };
 
     const debouncedHandleScroll = debounce(handleScroll, 100);
@@ -30,6 +57,7 @@ const Navigation = () => {
       window.removeEventListener('scroll', debouncedHandleScroll);
     };
   }, []);
+
 
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);

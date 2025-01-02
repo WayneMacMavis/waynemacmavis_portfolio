@@ -64,11 +64,11 @@ const AboutPage = () => {
         <div className="about-text">
           <VisibilitySensor offset={{ top: 0 }} onChange={onHeaderChange}>
             <div
-              style={{
+               style={{
                 transition: `opacity ${1}s ease, transform ${1}s ease`,
                 transitionDelay: `0.2s`,
                 opacity: isHeaderVisible ? 1 : 0,
-                transform: isHeaderVisible ? `translateY(${0}px)` : `translateY(${-100}px)`,
+                transform: isHeaderVisible ? `translateY(0)` : `translateY(-10px)`, // Subtle shift
               }}
             >
               <div className="about-header">
