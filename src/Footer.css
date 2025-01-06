@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  background: rgba(36, 36, 179, 0.788);
+  background: rgb(0, 0, 116);
   padding: 20px 0;
   text-align: center;
   top: 0px;
@@ -20,12 +20,13 @@
   flex: 1;
   margin: 0 20px;
   max-width: 400px; /* Set a maximum width */
+  color: #fff;
 }
 
 .icons a {
   margin: 5px;
   font-size: 24px;
-  color: #333;
+  color: #808080;
   transition: color 0.3s ease;
 }
 

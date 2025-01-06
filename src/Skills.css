@@ -1,5 +1,5 @@
 .skills-page {
-  background: rgb(0, 0, 128);
+  background: rgb(0, 0, 116);
     position: relative;
     height: auto;
     flex-direction: column;
@@ -60,7 +60,7 @@
   .progress-bar {
     height: 100%;
     border-radius: 5px;
-    background: linear-gradient(to right, #b1efffbb, #0066ff88);
+    background: linear-gradient(to right, #7ea8a5bb, #2f343688);
   }
 
   .progress-bar-container {
